@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rfBackgroundDarker"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/image"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/applogo"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/applogo" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/topInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center_vertical"
+        android:text="@string/location"
+        android:textColor="@color/yellowTitle"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineTop"
+        app:layout_constraintLeft_toRightOf="@+id/appIcon"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bottomReturn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/image"
+        android:onClick="moveBackToMain"
+        android:padding="5dp"
+        android:src="@drawable/reset"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintLeft_toRightOf="@+id/topInfo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reset" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineTop">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/menuTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/no_records_color"
+            app:tabTextAppearance="@style/TabLayoutStyle"
+            app:tabTextColor="@color/white_mine" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/rfBackgroundDarker" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

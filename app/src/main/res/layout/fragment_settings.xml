@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDarkBlue"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/backgroundTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pleaseChooseBackground"
+        android:textColor="@color/yellowTitle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backgroundBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_blue_grad"
+        android:drawableBottom="@drawable/background_blue_grad"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundTitle" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_normal_grad"
+        android:text="Button"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/background_red_grad"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            style="@style/backgroundRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_red_grad"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            style="@style/backgroundRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_red_grad"
+            android:text="RadioButton"
+            android:theme="@style/backgroundRadio" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            style="@style/backgroundRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_blue_grad"
+            android:text="RadioButton"
+            android:theme="@style/backgroundRadio" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            style="@style/backgroundRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/backgrond_mix_grad"
+            android:text="RadioButton"
+            android:theme="@style/backgroundRadio" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            style="@style/backgroundRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_light_grad"
+            android:text="RadioButton"
+            android:theme="@style/backgroundRadio" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

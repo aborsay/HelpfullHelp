@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="subCatLabel">14sp</dimen>
+    <dimen name="spinner_text">18sp</dimen>
+    <dimen name="editText">12sp</dimen>
+</resources>

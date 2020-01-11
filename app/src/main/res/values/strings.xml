@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Resource-Full</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="location">Lynchburg Metro Area</string>
+    <string name="organization">organization</string>
+    <string name="longOrganization">Shekijah Preparation Assembly</string>
+    <string name="name">name</string>
+    <string name="phone">Phone #</string>
+    <string name="secondPhone">Phone 2 #</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="blank"></string>
+    <string name="pickSub">Choose a \nsub-category:</string>
+    <string name="submitbtn">Add Sub</string>
+    <string name="about">About</string>
+    <string name="noRecordsInCat">There are currently no records in this category!</string>
+    <string name="noRecordsStart">The search for "</string>
+    <string name="noRecordsEnd">" found no records!\n\rPlease Try Again!</string>
+    <string name="image">image</string>
+    <string name="familyServices">Family Services</string>
+    <string name="developerLabel">Developer</string>
+    <string name="developerName">Aaron Borsay</string>
+    <string name="developerEmail">aaron@borsay.xyz</string>
+    <string name="reportABug">Report a Bug:</string>
+    <string name="bugEmail">bugs@resource-full.com</string>
+    <string name="bugDonate">donate@resource-full.com</string>
+    <string name="nameOrOrg">Search by Name or Organization</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="taglin">\"Connecting those who need help, with those who offer it\"</string>
+    <string name="infoAbout">The App was conceived by Patrick Monetti as an extension of the Blue Ridge Re-Entry Council founded by Steve Monetti in 2012, centered in Lynchburg Virginia.   As a result, this app is designed to be a reference point for all available resources in the greater Lynchburg area for those in need of any type of assistance. Here you will find links to church food pantries, private organizations that assist with medical, heating/cooling bills, and government entities for subsidized assistance programs. There are also contacts for government funded education courses, licensing and Child Support Enforcement, as well as counseling and support services.</string>
+    <string name="aboutPatrick">Patrick is the 2nd born of seven children to Steve and Kathy Monetti. Born in New York, he has lived in the Lynchburg area for 14 years. He achieved a Bachelor’s of Business Administration Degree in Management from Liberty University. Patrick has earned 11+ years of management experience from multiple positions between Lynchburg and Roanoke. He is an Eagle Scout of 13+ years with local troop 155, and holds a Black Belt in American Combat Martial Arts.</string>
+    <string name="aboutPatrickTitle">About Patrick Monetti</string>
+    <string name="aboutBorsayTitle">About the Programmer Borsay</string>
+    <string name="aboutBorsay">Aaron "George" Borsay has been programming since he was a wee little teen. He currently does web hosting, web design, database management, and Android Programming.
+    He has done programming in  Java, PHP, Objective C, SQL, VB, C++, JavaScript (different .JS as well), and many other worlds. If you have an idea please contact at.</string>
+    <string name="emailBorsay">george@borsay.xyz</string>
+    <string name="pleaseChooseBackground">Please choose desired background below.</string>
+</resources>

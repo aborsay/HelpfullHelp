@@ -1,0 +1,372 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDarkGreen">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/mainIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/applogo"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineTop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/guidelineTopIcons"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/applogo" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".85" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/topInfo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="@string/location"
+            android:textColor="@color/yellowTitle"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineTop"
+            app:layout_constraintLeft_toLeftOf="@+id/guidelineTopIcons"
+            app:layout_constraintRight_toRightOf="@id/guidlineLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".17" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottomMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".59" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottomLow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".8875" />
+
+        <ImageButton
+            android:id="@+id/family"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/family"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:tag="1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTopMiddle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/legal"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTopBottom"
+            app:layout_constraintVertical_weight="1" />
+
+        <ImageButton
+            android:id="@+id/legal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/legal"
+            android:tag="2"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTopMiddle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/family"
+            app:layout_constraintRight_toLeftOf="@+id/education"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTopBottom"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/legal" />
+
+        <ImageButton
+            android:id="@+id/education"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/education"
+            android:tag="3"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTopMiddle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/legal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTopBottom"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/education" />
+
+
+        <ImageButton
+            android:id="@+id/housing"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/house"
+            android:tag="4"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottomMiddle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/work"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTopMiddle"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/house" />
+
+        <ImageButton
+            android:id="@+id/work"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/worker"
+            android:tag="5"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottomMiddle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/housing"
+            app:layout_constraintRight_toLeftOf="@+id/food"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTopMiddle"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/worker" />
+
+        <ImageButton
+            android:id="@+id/food"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dinner"
+            android:tag="6"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottomMiddle"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/work"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTopMiddle"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/dinner" />
+
+
+        <ImageButton
+            android:id="@+id/health"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/health"
+            android:tag="7"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/transportation"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineBottomMiddle"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/health" />
+
+        <ImageButton
+            android:id="@+id/transportation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/transportation"
+            android:tag="8"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/health"
+            app:layout_constraintRight_toLeftOf="@+id/finances"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineBottomMiddle"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/transportation" />
+
+        <ImageButton
+            android:id="@+id/finances"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/money_bag"
+            android:tag="9"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/transportation"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineBottomMiddle"
+            app:layout_constraintVertical_weight="1" />
+
+
+        <ImageButton
+            android:id="@+id/clothes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/shirt"
+            android:tag="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/blank"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineBottom"
+            app:layout_constraintVertical_weight="1"
+            app:srcCompat="@drawable/shirt" />
+
+        <View
+            android:id="@+id/blank"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/clothes"
+            app:layout_constraintRight_toLeftOf="@+id/menu"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineBottom"
+            app:layout_constraintVertical_weight="1" />
+
+
+        <ImageButton
+            android:id="@+id/menu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:onClick="clickIcon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/info"
+            android:tag="11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/blank"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineBottom"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/info" />
+
+        <EditText
+            android:id="@+id/searchString"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_box"
+            android:hint="@string/nameOrOrg"
+            android:inputType="textPersonName"
+            android:paddingStart="4dp"
+            android:paddingEnd="0dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTopBottom"
+            app:layout_constraintHorizontal_weight=".8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/nameSearch"
+            app:layout_constraintTop_toBottomOf="@id/guidelineTop"
+            app:layout_constraintVertical_weight="1"
+            tools:ignore="Autofill" />
+
+        <ImageView
+            android:id="@+id/nameSearch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/image"
+            android:onClick="searchBy"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icons_search"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTopBottom"
+            app:layout_constraintHorizontal_weight=".2"
+            app:layout_constraintLeft_toRightOf="@+id/searchString"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guidelineTop"
+            app:layout_constraintVertical_weight="1"
+            tools:srcCompat="@drawable/icons_search" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+</FrameLayout>

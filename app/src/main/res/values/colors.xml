@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimary2">#233642</color>
+    <color name="colorPrimaryDark">#4c758e</color>
+    <color name="colorPrimarySemiDark">#385a6f</color>
+    <color name="colorPrimaryLighter">#385a6f</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="green_main">#185f17</color>
+    <color name="blue_main">#f9233642</color>
+    <color name="white_mine">#FFFFFF</color>
+    <color name="no_records_color">#5391B8</color>
+    <color name="transparent">#00000000</color>
+    <color name="noticeBox">#741010</color>
+    <color name="lightGrey">#64AAF9</color>
+    <color name="helpTypes">#E1DA5A</color>
+    <color name="rfBackground">#175f17</color>
+    <color name="rfBackgroundDarker">#395b2c</color>
+
+    <color name="backgroundDarkGreen">#395B2C</color>
+
+    <color name="backgroundDarkRed">#5c1212</color>
+    <color name="backgroundDarkBlue">#31435a</color>
+    <color name="backgroundDarkGrey">#272727</color>
+    <color name="backgroundMidGrey">#353535</color>
+    <color name="backgroundLightGrey">#575757</color>
+
+    <color name="emailColor">#405d7f</color>
+    <color name="titleColor">#1e2835</color>
+    <color name="yellowTitle">#E1DA5A</color>
+</resources>

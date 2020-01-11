@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_normal_grad"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/image"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/applogo"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/applogo" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/topInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center_vertical"
+        android:text="@string/location"
+        android:textColor="@color/yellowTitle"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineTop"
+        app:layout_constraintLeft_toRightOf="@+id/appIcon"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textAllCaps="false" />
+
+    <ImageView
+        android:id="@+id/bottomReturn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/image"
+        android:onClick="resetCats"
+        android:padding="5dp"
+        android:src="@drawable/reset"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintLeft_toRightOf="@+id/topInfo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reset" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <ImageView
+        android:id="@+id/currentCat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:contentDescription="@string/image"
+        android:onClick="moveBackToMain"
+        android:src="@drawable/legal"
+        app:layout_constraintBottom_toBottomOf="@id/aboveSubCategory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineTop"
+        app:srcCompat="@drawable/legal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mainCat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+        android:gravity="center_vertical|start"
+        android:text="@string/familyServices"
+        android:textColor="@android:color/white"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/helpTypes"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineTop" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/helpTypes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="top|start"
+        android:onClick="goBackType"
+        android:paddingStart="24dp"
+        android:paddingEnd="0dp"
+        android:text="@string/blank"
+        android:textColor="@color/helpTypes"
+        app:autoSizeMaxTextSize="36sp"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/aboveSubCategory"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainCat" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/searchData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top|start"
+        android:onClick="goBackType"
+        android:paddingStart="24dp"
+        android:paddingEnd="0dp"
+        android:text="@string/blank"
+        android:textColor="@color/helpTypes"
+        app:autoSizeMaxTextSize="36sp"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/aboveSubCategory"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainCat" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aboveSubCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:numColumns="1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+
+    <LinearLayout
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+
+        android:orientation="horizontal"
+        android:padding="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineAboveList"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineRight"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboveSubCategory">
+
+        <RelativeLayout
+            android:id="@+id/spinnerRelative"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/spinner_border"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/subCatSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/drop_arrow" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAboveList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".21" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineListTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="241dp" />
+
+
+    <LinearLayout
+        android:id="@+id/noRecordsNotice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/notice_box"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineListBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineListTop">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noRecordsNoticeText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start|end"
+            android:text="@string/noRecordsInCat"
+            android:textColor="@color/noticeBox"
+            app:autoSizeMaxTextSize="36sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight=".25"
+            android:contentDescription="@string/image"
+            android:onClick="resetCats"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reset"
+            app:srcCompat="@drawable/reset" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineListBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".66" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineAboveList">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contactList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:divider="@color/transparent"
+            android:dividerHeight="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/theList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineAboveList"
+        app:layout_constraintVertical_bias="1.0">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
